@@ -11,7 +11,7 @@ const rl = createInterface({
 //loop array
 //log output
 const testCases: string[] = [
-    '["001", "002", "010"]',
+    '["001", "002", "9999"]',
     '["1", "01", "10"]',
     '["100", "200", "300"]',
     '["0001", "002", "03"]',
@@ -23,10 +23,11 @@ const testCases: string[] = [
     '["009", "9", "09"]'
 ];
 
+testCases?.map((testCase) => console.log(`Input:${testCase} Output: ${checkNumberPadding(JSON.parse(testCase))}`))
 // Get input from user
-rl.question('Ex: ["001"] \nEnter array of strings to check for padding consistency:\n', (answer: string) => {
-    console.log(`Output: ${checkNumberPadding(JSON.parse(answer))}`);
+// rl.question('Ex: ["001"] \nEnter array of strings to check for padding consistency:\n', (answer: string) => {
+//     console.log(`Output: ${checkNumberPadding(JSON.parse(answer))}`);
 
-    // Close the readline interface
-    rl.close();
-});
+//     // Close the readline interface
+//     rl.close();
+// });
